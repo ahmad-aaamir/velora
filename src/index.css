@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #070707;
+    color: #ede8df;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2824;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #473e31;
+}
+
+/* Subtle gold border glow */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+.gold-border:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Subtle image zoom on card hover */
+.img-zoom {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Luxury Slide In From Left Keyframe & Stagger Delays */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideInFromLeft 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.delay-hero-1 {
+  animation-delay: 150ms;
+}
+
+.delay-hero-2 {
+  animation-delay: 350ms;
+}
+
+.delay-hero-3 {
+  animation-delay: 550ms;
+}
+
+.delay-hero-4 {
+  animation-delay: 750ms;
+}
